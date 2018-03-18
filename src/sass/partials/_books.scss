@@ -1,0 +1,80 @@
+.book-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  color: $color-grey-dark;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+
+    &:nth-child(odd) {
+      background-color: rgba($color-primary, 0.2);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0.8rem;
+    }
+  }
+
+  &__detail {
+    flex: 1;
+    @media only screen and (max-width: $bp-small) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__heading {
+    font-weight: 700;
+    color: $color-primary;
+  }
+
+  &__edit {
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    transition: all 0.2s;
+    background: none;
+    border: 0;
+    color: $color-primary;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    padding: 1rem;
+  }
+
+  &__edit:hover,
+  &__edit:active {
+    color: $color-primary-light;
+  }
+
+  &__edit:focus {
+    outline: 2px solid $color-primary-dark;
+  }
+
+  &__delete {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 3rem;
+    transition: all 0.2s;
+    background: none;
+    border: 0;
+    color: $color-primary;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    padding: 0 0.8rem;
+  }
+
+  &__delete:hover,
+  &__delete:active {
+    color: $color-primary-light;
+  }
+
+  &__delete:focus {
+    outline: 2px solid $color-primary-dark;
+  }
+}

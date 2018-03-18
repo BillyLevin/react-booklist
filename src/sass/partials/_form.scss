@@ -1,0 +1,62 @@
+.book-form {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-bottom: 1rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 1rem 2rem;
+  }
+
+  &__label {
+    color: $color-grey-dark;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    padding: 1.5rem 2.5rem;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    background-color: $color-grey-light;
+    color: $color-primary;
+    font-size: 1.8rem;
+  }
+
+  &__input:focus {
+    outline: 0;
+    box-shadow: 0rem 1rem 2rem rgba($color-black, 0.1);
+    border-bottom: 2px solid $color-primary;
+  }
+
+  &__submit {
+    align-self: flex-end;
+    padding: 1.5rem 2.5rem;
+    background-color: $color-primary;
+    color: $color-white;
+    border: 0;
+    cursor: pointer;
+    outline: 3px solid transparent;
+    transition: all 0.2s;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__submit:hover {
+    background-color: $color-primary-dark;
+  }
+
+  &__submit:focus {
+    outline: 3px solid $color-primary-light;
+  }
+}
